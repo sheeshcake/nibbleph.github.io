@@ -253,7 +253,7 @@ const LandingPortfolio = () => {
                                     }}
                                     variant='contained'
                                     onClick={() => {
-                                        window.open('https://web.clicknowseo.com/', '_blank')
+                                        window.open('https://seodirectservice.com/', '_blank')
                                     }}
                                 >
                                     Visit Project
@@ -374,6 +374,19 @@ const LandingPortfolio = () => {
                                         backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the alpha value for transparency
                                     }}
                                 />
+                                                        <Button
+                            sx={{
+                                position: 'absolute',
+                                top: 10,
+                                right: '10px'
+                            }}
+                            variant='contained'
+                            onClick={() => {
+                                window.open('https://wesparc.com/', '_blank')
+                            }}
+                        >
+                            Visit Project
+                        </Button>
 
                                 {/* Content */}
                                 <CardContent
