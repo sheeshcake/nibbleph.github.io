@@ -1,0 +1,49 @@
+<svg width="1920" height="2147" viewBox="0 0 1920 2147" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.35" clip-path="url(#clip0_33_2991)">
+<path d="M-802.766 1098.04C-785.258 1224.54 -653.944 1314.38 -515.77 1328.01C-377.597 1341.63 -236.651 1292.95 -112.751 1227.09C11.1487 1161.23 123.861 1077.9 247.567 1011.74C371.272 945.579 511.828 896.169 650.187 908.708C817.984 923.927 954.373 1025.95 1107.83 1084.93C1349.7 1177.94 1644.76 1158.74 1882.6 1034.5C2005.21 970.465 2123.02 856.513 2104.73 731.988" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<animateTransform attributeName="transform" type="translate" values="0,0; 15,10; 30,-10; 15,-20; 0,0" dur="10s" repeatCount="indefinite" additive="sum"/>
+<animate attributeName="opacity" values="0.5;0.8;0.5" dur="10s" repeatCount="indefinite"/>
+</path>
+<path d="M-819.919 1071.86C-802.411 1198.36 -671.097 1288.2 -532.923 1301.83C-394.75 1315.46 -253.804 1266.77 -129.904 1200.91C-6.00426 1135.05 106.708 1051.73 230.414 985.565C354.119 919.402 494.675 869.993 633.034 882.531C800.831 897.751 937.22 999.769 1090.67 1058.75C1332.54 1151.76 1627.61 1132.56 1865.45 1008.32C1988.06 944.289 2105.87 830.336 2087.57 705.811" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<animateTransform attributeName="transform" type="translate" values="0,0; -10,15; -20,-5; -10,-15; 0,0" dur="12s" repeatCount="indefinite" additive="sum"/>
+<animate attributeName="opacity" values="0.5;0.9;0.5" dur="12s" repeatCount="indefinite"/>
+</path>
+<path d="M-837.081 1045.66C-819.573 1172.16 -688.258 1261.99 -550.085 1275.62C-411.911 1289.25 -270.965 1240.57 -147.065 1174.7C-23.1657 1108.84 89.547 1025.52 213.252 959.357C336.958 893.195 477.514 843.786 615.872 856.324C783.67 871.544 920.059 973.562 1073.51 1032.55C1315.38 1125.56 1610.44 1106.35 1848.29 982.113C1970.89 918.082 2088.7 804.129 2070.41 679.604" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<animateTransform attributeName="transform" type="translate" values="0,0; 20,15; 40,-10; 20,-20; 0,0" dur="15s" repeatCount="indefinite" additive="sum"/>
+<animate attributeName="opacity" values="0.5;0.7;0.5" dur="15s" repeatCount="indefinite"/>
+</path>
+<path d="M-854.21 1019.44C-836.702 1145.94 -705.387 1235.78 -567.214 1249.4C-429.04 1263.03 -288.094 1214.35 -164.194 1148.49C-40.2945 1082.62 72.4182 999.303 196.124 933.141C319.829 866.978 460.385 817.569 598.743 830.108C766.541 845.327 902.93 947.345 1056.38 1006.33C1298.25 1099.34 1593.32 1080.14 1831.16 955.896C1953.77 891.865 2071.58 777.912 2053.28 653.387" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<animateTransform attributeName="transform" type="translate" values="0,0; -15,20; -30,-5; -15,-15; 0,0" dur="13s" repeatCount="indefinite" additive="sum"/>
+<animate attributeName="opacity" values="0.5;0.8;0.5" dur="13s" repeatCount="indefinite"/>
+</path>
+<path d="M-871.371 993.231C-853.863 1119.73 -722.549 1209.57 -584.375 1223.2C-446.202 1236.83 -305.256 1188.14 -181.356 1122.28C-57.4561 1056.42 55.2566 973.096 178.962 906.934C302.668 840.771 443.223 791.362 581.582 803.9C749.38 819.12 885.768 921.138 1039.22 980.123C1281.09 1073.13 1576.15 1053.93 1814 929.689C1936.6 865.658 2054.41 751.705 2036.12 627.18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<animateTransform attributeName="transform" type="translate" values="0,0; 25,10; 50,-15; 25,-20; 0,0" dur="14s" repeatCount="indefinite" additive="sum"/>
+<animate attributeName="opacity" values="0.5;0.9;0.5" dur="14s" repeatCount="indefinite"/>
+</path>
+<path d="M-888.524 967.054C-871.016 1093.55 -739.702 1183.39 -601.528 1197.02C-463.354 1210.65 -322.408 1161.97 -198.509 1096.1C-74.6089 1030.24 38.1038 946.919 161.809 880.756C285.515 814.594 426.07 765.184 564.429 777.723C732.227 792.943 868.615 894.961 1022.07 953.946C1263.94 1046.96 1559 1027.75 1796.84 903.512C1919.45 839.481 2037.26 725.528 2018.97 601.003" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<animateTransform attributeName="transform" type="translate" values="0,0; -20,15; -40,-10; -20,-15; 0,0" dur="16s" repeatCount="indefinite" additive="sum"/>
+<animate attributeName="opacity" values="0.5;0.7;0.5" dur="16s" repeatCount="indefinite"/>
+</path>
+<path d="M-905.686 940.847C-888.178 1067.35 -756.863 1157.19 -618.69 1170.81C-480.516 1184.44 -339.57 1135.76 -215.67 1069.9C-91.7707 1004.03 20.9422 920.712 144.648 854.55C268.353 788.387 408.909 738.978 547.267 751.517C715.065 766.736 851.454 868.755 1004.91 927.739C1246.78 1020.75 1541.84 1001.55 1779.68 877.305C1902.29 813.274 2020.1 699.321 2001.81 574.797" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<animateTransform attributeName="transform" type="translate" values="0,0; 15,20; 30,-5; 15,-25; 0,0" dur="17s" repeatCount="indefinite" additive="sum"/>
+<animate attributeName="opacity" values="0.4;0.8;0.4" dur="17s" repeatCount="indefinite"/>
+</path>
+<path d="M-922.815 914.631C-905.306 1041.13 -773.992 1130.97 -635.818 1144.6C-497.645 1158.22 -356.699 1109.54 -232.799 1043.68C-108.899 977.817 3.81339 894.495 127.519 828.333C251.224 762.171 391.78 712.761 530.139 725.3C697.936 740.519 834.325 842.538 987.777 901.523C1229.65 994.532 1524.71 975.33 1762.55 851.089C1885.16 787.057 2002.97 673.104 1984.68 548.58" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<animateTransform attributeName="transform" type="translate" values="0,0; -25,10; -50,-10; -25,-20; 0,0" dur="18s" repeatCount="indefinite" additive="sum"/>
+<animate attributeName="opacity" values="0.3;0.7;0.3" dur="18s" repeatCount="indefinite"/>
+</path>
+<path d="M-939.976 888.424C-922.468 1014.92 -791.153 1104.76 -652.98 1118.39C-514.806 1132.02 -373.86 1083.34 -249.961 1017.47C-126.061 951.61 -13.348 868.288 110.357 802.126C234.063 735.963 374.619 686.554 512.977 699.093C680.775 714.312 817.164 816.331 970.615 875.316C1212.49 968.325 1507.55 949.123 1745.39 824.882C1868 760.85 1985.81 646.897 1967.52 522.373" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<animateTransform attributeName="transform" type="translate" values="0,0; 20,15; 40,-15; 20,-25; 0,0" dur="19s" repeatCount="indefinite" additive="sum"/>
+<animate attributeName="opacity" values="0.2;0.6;0.2" dur="19s" repeatCount="indefinite"/>
+</path>
+<path d="M-957.138 862.217C-939.63 988.717 -808.315 1078.56 -670.142 1092.18C-531.968 1105.81 -391.022 1057.13 -267.122 991.266C-143.223 925.403 -30.5097 842.081 93.1958 775.919C216.901 709.756 357.457 660.347 495.815 672.886C663.613 688.105 800.002 790.124 953.454 849.109C1195.32 942.118 1490.39 922.916 1728.23 798.675C1850.84 734.643 1968.65 620.69 1950.35 496.166" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<animateTransform attributeName="transform" type="translate" values="0,0; -15,20; -30,-10; -15,-15; 0,0" dur="20s" repeatCount="indefinite" additive="sum"/>
+<animate attributeName="opacity" values="0.1;0.5;0.1" dur="20s" repeatCount="indefinite"/>
+</path>
+</g>
+<defs>
+<clipPath id="clip0_33_2991">
+<rect width="3091.85" height="1337.45" fill="white" transform="matrix(-0.960352 0.27879 0.27879 0.960352 2008.27 0)"/>
+</clipPath>
+</defs>
+</svg>

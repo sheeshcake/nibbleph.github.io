@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g><g transform="matrix(14.084507042253522,0,0,14.084507042253522,126.76056338028167,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="71"><svg width="53" height="71" viewBox="0 0 53 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.696 55V15.8H17.752L25.536 49.96H26.544V15.8H33.824V55H19.768L11.984 20.84H10.976V55H3.696ZM41.4356 55V27.224H48.4916V55H41.4356ZM44.9636 23.976C43.6943 23.976 42.6116 23.5653 41.7156 22.744C40.857 21.9227 40.4276 20.84 40.4276 19.496C40.4276 18.152 40.857 17.0693 41.7156 16.248C42.6116 15.4267 43.6943 15.016 44.9636 15.016C46.2703 15.016 47.353 15.4267 48.2116 16.248C49.0703 17.0693 49.4996 18.152 49.4996 19.496C49.4996 20.84 49.0703 21.9227 48.2116 22.744C47.353 23.5653 46.2703 23.976 44.9636 23.976Z" fill="black"></path>
+<rect x="40" y="15" width="10" height="9" rx="4.5" fill="#990000"></rect>
+</svg></svg></g></g></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1081)"><rect width="1000" height="1000" fill="#ffffff"></rect><g transform="matrix(14.084507042253522,0,0,14.084507042253522,126.76056338028167,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="71"><svg width="53" height="71" viewBox="0 0 53 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.696 55V15.8H17.752L25.536 49.96H26.544V15.8H33.824V55H19.768L11.984 20.84H10.976V55H3.696ZM41.4356 55V27.224H48.4916V55H41.4356ZM44.9636 23.976C43.6943 23.976 42.6116 23.5653 41.7156 22.744C40.857 21.9227 40.4276 20.84 40.4276 19.496C40.4276 18.152 40.857 17.0693 41.7156 16.248C42.6116 15.4267 43.6943 15.016 44.9636 15.016C46.2703 15.016 47.353 15.4267 48.2116 16.248C49.0703 17.0693 49.4996 18.152 49.4996 19.496C49.4996 20.84 49.0703 21.9227 48.2116 22.744C47.353 23.5653 46.2703 23.976 44.9636 23.976Z" fill="black"></path>
+<rect x="40" y="15" width="10" height="9" rx="4.5" fill="#990000"></rect>
+</svg></svg></g></g><defs><clipPath id="SvgjsClipPath1081"><rect width="1000" height="1000" x="0" y="0" rx="150" ry="150"></rect></clipPath></defs></svg></g></svg>
