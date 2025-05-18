@@ -3,8 +3,8 @@ import React from 'react';
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: "Alex Morgan",
-      title: "Founder & CEO"
+      name: "Wendale Franz Dy",
+      title: "Tech Lead/Engineering Manager",
     },
     {
       name: "Sarah Chen",
