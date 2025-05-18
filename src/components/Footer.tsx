@@ -10,11 +10,8 @@ const Footer = () => {
           <div className="mb-8 md:mb-0">
             <div className="flex items-center mb-6">
               <Link to="/" className="text-xl font-bold flex items-center">
-                Nibble<span className="text-xs ml-1 mt-1">Dev Team</span>
+                <img src="/nibble-logo-white.svg" alt="Nibble Logo" className="h-8" />
               </Link>
-            </div>
-            <div className="bg-techred rounded-full h-8 w-8 flex items-center justify-center">
-              <span className="text-white text-xs">R</span>
             </div>
           </div>
           

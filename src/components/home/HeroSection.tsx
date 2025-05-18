@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const waveContainerRef = useRef<HTMLDivElement>(null);
@@ -224,7 +225,7 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen bg-black relative overflow-hidden pt-24">
       {/* Main content */}
-      <div className="container mx-auto px-8 pt-10">
+      <div className="container mx-auto px-8 pt-10 z-50">
         {/* Top row - Transform and gray box */}
         <div className="flex justify-between items-center">
           <h1 className="text-8xl md:text-[150px] font-bold text-white leading-[1.1] animate-fade-in">
@@ -235,7 +236,10 @@ const HeroSection = () => {
           <div className="relative">
             <div className="w-[540px] h-[250px] bg-gray-800/40 backdrop-blur-sm rounded-[30px] animate-fade-in-delay"></div>
             {/* Explore button */}
-            <div className="absolute right-12 -bottom-20">
+            <Link 
+            to={''}
+            className="absolute right-12 -bottom-20 z-100 hover:cursor-pointer"
+            >
               <div className="w-[200px] h-[200px] rounded-full bg-red-600 flex items-center justify-center cursor-pointer transform hover:scale-105 transition-transform duration-300 relative animate-fade-in-bounce">
                 {/* Centered Arrow */}
                 <div className="w-[180px] h-[180px] inset-0 flex items-center justify-center z-10">
@@ -275,7 +279,7 @@ const HeroSection = () => {
                   </svg>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="flex flex-row gap-10 -mt-5">
@@ -293,8 +297,7 @@ const HeroSection = () => {
             Our team of experts has years of experience in the IT industry and a
             passion for innovative technology solutions. We're dedicated to
             delivering solutions that are tailored to your unique needs and
-            budget, and that exceed your expectations. Click explore now for
-            more.
+            budget, and that exceed your expectations.
           </p>
         </div>
       </div>
@@ -337,7 +340,6 @@ const HeroSection = () => {
         
         .wavelines-wrapper {
           position: relative;
-          z-index: 1;
         }
         
         .wavelines-container {
@@ -356,7 +358,6 @@ const HeroSection = () => {
           right: 0;
           top: 0;
           bottom: 0;
-          pointer-events: none;
         }
         
         .sine-wave-layer {
