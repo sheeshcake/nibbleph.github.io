@@ -68,8 +68,8 @@ export default {
 				techgray: '#f5f5f5',
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				display: ['Poppins', 'sans-serif'],
+				sans: ['Space Grotesk', 'sans-serif'],
+				display: ['Space Grotesk', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

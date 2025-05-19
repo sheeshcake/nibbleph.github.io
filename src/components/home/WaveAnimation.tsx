@@ -1,9 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
-import WaveAnimation from "./WaveAnimation";
-import ExploreButton from "./ExploreButton";
 
-const HeroSection = () => {
+const WaveAnimation = () => {
   const waveContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -225,52 +222,41 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="min-h-screen bg-black relative overflow-hidden pt-24">
-      {/* Main content */}
-      <div className="container mx-auto px-8 pt-10">
-        {/* Top row - Transform and gray box */}
-        <div className="flex justify-between items-center">
-          <h1 className="text-8xl md:text-[150px] font-bold text-white leading-[1.1] animate-fade-in">
-            <span className="inline-block animate-slide-up">Transform</span>
-          </h1>
+    <>
+      {/* Animated Wave lines using external SVG */}
+      <div className="absolute bottom-0 left-0 right-0 w-full h-[500px] wavelines-wrapper overflow-visible">
+        <div
+          ref={waveContainerRef}
+          className="absolute wavelines-container w-full h-full"
+        >
+          <object
+            id="wavelines-svg-object"
+            data="/wavelines.svg"
+            type="image/svg+xml"
+            className="w-full transform scale-150 -translate-y-1/3"
+          ></object>
 
-          {/* Use the new ExploreButton component */}
-          <ExploreButton to="/services" />
-        </div>
-        <div className="flex flex-row gap-10 -mt-5">
-          <h1 className="text-8xl md:text-[150px] font-bold text-white leading-[1.1] animate-fade-in-delay">
-            <span className="inline-block animate-slide-up-delay">Your</span>
-          </h1>
-          <h1 className="text-8xl md:text-[150px] italic font-normal text-white leading-[1.1] animate-fade-in-delay-2">
-            <span className="inline-block animate-slide-up-delay-2">
-              Business
-            </span>
-          </h1>
-        </div>
-        <div className="max-w-xl ml-auto mr-[60px] animate-fade-in-delay-3">
-          <p className="text-gray-400 text-lg leading-relaxed text-left">
-            Our team of experts has years of experience in the IT industry and a
-            passion for innovative technology solutions. We're dedicated to
-            delivering solutions that are tailored to your unique needs and
-            budget, and that exceed your expectations.
-          </p>
+          {/* Overlay sine wave layer for enhanced effect */}
+          <div className="absolute inset-0 sine-wave-overlay">
+            {[...Array(3)].map((_, i) => (
+              <div
+                key={i}
+                className={`sine-wave-layer wave-layer-${i + 1}`}
+                style={{
+                  animationDelay: `${i * 0.5}s`,
+                  opacity: 0.03 + i * 0.01,
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Include the wave animation component */}
-      <WaveAnimation />
-
-      {/* Keep the animation styles for the content */}
+      {/* Animation styles */}
       <style>{`
-        @keyframes pulse-border {
-          0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
-          70% { box-shadow: 0 0 0 15px rgba(255, 0, 0, 0); }
-          100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
-        }
-        
-        /* Add this class for the group hover effect */
-        .group:hover {
-          animation: pulse-border 1.5s infinite;
+        @keyframes float {
+          0% { transform: translateY(0); }
+          100% { transform: translateY(-20px); }
         }
         
         .wavelines-wrapper {
@@ -341,63 +327,9 @@ const HeroSection = () => {
             transform: translateY(-20px) scaleX(1.05) skewY(1deg);
           }
         }
-        
-        @keyframes slide-up {
-          0% { transform: translateY(40px); opacity: 0; }
-          100% { transform: translateY(0); opacity: 1; }
-        }
-        
-        @keyframes fade-in {
-          0% { opacity: 0; }
-          100% { opacity: 1; }
-        }
-        
-        @keyframes fade-in-bounce {
-          0% { opacity: 0; transform: scale(0.8); }
-          70% { opacity: 1; transform: scale(1.1); }
-          100% { opacity: 1; transform: scale(1); }
-        }
-        
-        .animate-slide-up {
-          animation: slide-up 0.8s ease-out forwards;
-        }
-        
-        .animate-slide-up-delay {
-          animation: slide-up 0.8s ease-out 0.3s forwards;
-          opacity: 0;
-        }
-        
-        .animate-slide-up-delay-2 {
-          animation: slide-up 0.8s ease-out 0.6s forwards;
-          opacity: 0;
-        }
-        
-        .animate-fade-in {
-          animation: fade-in 0.8s ease-out forwards;
-        }
-        
-        .animate-fade-in-delay {
-          animation: fade-in 0.8s ease-out 0.3s forwards;
-          opacity: 0;
-        }
-        
-        .animate-fade-in-delay-2 {
-          animation: fade-in 0.8s ease-out 0.6s forwards;
-          opacity: 0;
-        }
-        
-        .animate-fade-in-delay-3 {
-          animation: fade-in 0.8s ease-out 0.9s forwards;
-          opacity: 0;
-        }
-        
-        .animate-fade-in-bounce {
-          animation: fade-in-bounce 1s ease-out 1.2s forwards;
-          opacity: 0;
-        }
       `}</style>
-    </section>
+    </>
   );
 };
 
-export default HeroSection;
+export default WaveAnimation;
