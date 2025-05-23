@@ -11,6 +11,7 @@ import TestimonialsSection from '../components/home/TestimonialsSection';
 import TeamSection from '../components/home/TeamSection';
 import BlogSection from '../components/home/BlogSection';
 import FaqSection from '../components/home/FaqSection';
+import AboutUsSection from '../components/home/AboutUsSection';
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       
       <main className="flex-grow">
         <HeroSection />
+        <AboutUsSection />
         <WhyUsSection />
         <ServicesSection />
         <ProjectsSection />
