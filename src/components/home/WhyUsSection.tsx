@@ -27,7 +27,7 @@ const WhyUsSection = () => {
 
   return (
     <section className="text-white pb-20 relative z-20 bg-black">
-      <div className="container-custom bg-transparent relative z-20">
+      <div className="container-custom bg-transparent relative z-20 mt-20">
         <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-20 text-center">Why <span className="text-red-600">Us</span>?</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-20 gap-10 md:gap-12">

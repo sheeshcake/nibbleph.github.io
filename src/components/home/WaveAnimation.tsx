@@ -224,7 +224,7 @@ const WaveAnimation = () => {
   return (
     <>
       {/* Animated Wave lines using external SVG */}
-      <div className="absolute bottom-0 left-0 right-0 w-full h-[500px] wavelines-wrapper overflow-visible">
+      <div className="absolute bottom-0 left-0 right-0 w-full h-[500px] wavelines-wrapper overflow-visible z-10">
         <div
           ref={waveContainerRef}
           className="absolute wavelines-container w-full h-full"
