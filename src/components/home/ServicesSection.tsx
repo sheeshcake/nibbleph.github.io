@@ -67,19 +67,19 @@ const ServicesSection = () => {
 
   return (
     <section className="bg-black py-20 relative overflow-hidden">
-      {/* Animated floating squares */}
+      {/* Animated floating squares - added more animations */}
       <div 
-        className="absolute top-10 left-1/2 w-20 h-20 bg-gray-400 opacity-30 animate-float transition-all duration-3000 ease-in-out"
+        className="absolute top-10 left-1/2 w-20 h-20 bg-gray-400 opacity-30 animate-float transition-all duration-3000 ease-in-out backdrop-blur-sm"
         style={{
           transform: `translateY(0) translateX(${positions.square1.x}px) rotate(${positions.square1.rotation}deg)`,
-          animation: 'float 6s ease-in-out infinite, spin 15s linear infinite'
+          animation: 'float 6s ease-in-out infinite, spin 15s linear infinite, pulse 4s ease-in-out infinite'
         }}
       ></div>
       <div 
-        className="absolute bottom-10 right-10 w-10 h-10 bg-red-600 transition-all duration-3000 ease-in-out"
+        className="absolute bottom-10 right-10 w-10 h-10 bg-red-600 transition-all duration-3000 ease-in-out backdrop-blur-sm"
         style={{
           transform: `translateY(0) translateX(${positions.square2.x}px) rotate(${positions.square2.rotation}deg)`,
-          animation: 'float-slow 8s ease-in-out infinite, spin 20s linear infinite reverse'
+          animation: 'float-slow 8s ease-in-out infinite, spin 20s linear infinite reverse, scale 5s ease-in-out infinite'
         }}
       ></div>
       
@@ -168,6 +168,22 @@ const ServicesSection = () => {
         @keyframes spin {
           from { transform: rotate(0deg) translateX(0) translateY(0); }
           to { transform: rotate(360deg) translateX(0) translateY(0); }
+        }
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-30px); }
+        }
+        @keyframes pulse {
+          0%, 100% { opacity: 0.3; }
+          50% { opacity: 0.5; }
+        }
+        @keyframes scale {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.2); }
         }
         .duration-3000 {
           transition-duration: 3000ms;

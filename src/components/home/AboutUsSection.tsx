@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function AboutUsSection() {
 
@@ -45,17 +46,106 @@ export default function AboutUsSection() {
     }, []);
 
 
+    const textVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { 
+            opacity: 1, 
+            y: 0,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut"
+            }
+        }
+    };
+
+    const wordVariants = {
+        hidden: { opacity: 0, y: 40 },
+        visible: (i: number) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: i * 0.1,
+                duration: 0.5
+            }
+        })
+    };
+
     return (
         <div className="container-custom flex flex-row mb-20 overflow-visible h-[60vh]">
-            <div className="flex flex-col gap-5 mr-20">
-                <h1 className="text-red-500 text-2xl">About.</h1>
-                <h1 className="text-white text-6xl">We believe that <span className="text-white italic font-thin">technology</span></h1>
-                <h1 className="text-white text-6xl">can transform the <span className="text-red-500" >world</span>.</h1>
-                <p className="text-white">
+            <motion.div 
+                initial="hidden"
+                animate="visible"
+                className="flex flex-col gap-5 mr-20"
+            >
+                <motion.h1 
+                    variants={textVariants}
+                    className="text-red-500 text-2xl relative"
+                >
+                    About.
+                </motion.h1>
+                
+                <motion.h1 
+                    className="text-white text-6xl flex flex-wrap gap-3"
+                    variants={textVariants}
+                >
+                    {["We", "believe", "that"].map((word, i) => (
+                        <motion.span
+                            key={i}
+                            custom={i}
+                            variants={wordVariants}
+                            className="inline-block"
+                        >
+                            {word}{" "}
+                        </motion.span>
+                    ))}
+                    <motion.span 
+                        custom={3}
+                        variants={wordVariants}
+                        className="text-white italic font-thin"
+                    >
+                        technology
+                    </motion.span>
+                </motion.h1>
+
+                <motion.h1 
+                    className="text-white text-6xl flex flex-wrap gap-3"
+                    variants={textVariants}
+                >
+                    {["can", "transform", "the"].map((word, i) => (
+                        <motion.span
+                            key={i}
+                            custom={i + 4}
+                            variants={wordVariants}
+                            className="inline-block"
+                        >
+                            {word}{" "}
+                        </motion.span>
+                    ))}
+                    <motion.span 
+                        className="text-red-500"
+                        variants={wordVariants}
+                        custom={7}
+                        whileHover={{ 
+                            scale: 1.1,
+                            transition: { duration: 0.2 }
+                        }}
+                    >
+                        world
+                    </motion.span>
+                    <motion.span variants={wordVariants} custom={8}>.</motion.span>
+                </motion.h1>
+
+                <motion.p 
+                    className="text-white max-w-xl"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1, duration: 0.8 }}
+                >
                     That is why we're committed to delivering innovative IT solutions to businesses of all sizes. Our team of experienced professionals is dedicated to helping you achieve your goals and thrive in a rapidly evolving digital landscape. Our
-                     goal is to help businesses of all sizes  succeed by providing customized solutions that meet their unique needs.
-                </p>    
-            </div>
+                     goal is to help businesses of all sizes succeed by providing customized solutions that meet their unique needs.
+                </motion.p>    
+            </motion.div>
+
             <div className="flex flex-col gap-5 mx-20 pt-20">
                 <div 
                     className="w-5 h-5 bg-gray-500 justify-end self-end"
