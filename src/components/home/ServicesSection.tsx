@@ -45,23 +45,28 @@ const ServicesSection = () => {
   const services = [
     {
       title: "Web Development",
-      path: "/services/web"
+      path: "#"
+      // path: "/services/web"
     },
     {
       title: "Mobile Development",
-      path: "/services/mobile"
+      path: "#"
+      // path: "/services/mobile"
     },
     {
       title: "Artificial Intelligence",
-      path: "/services/ai"
+      path: "#"
+      // path: "/services/ai"
     },
     {
       title: "Quality Assurance",
-      path: "/services/qa"
+      path: "#"
+      // path: "/services/qa"
     },
     {
       title: "Database Architecture",
-      path: "/services/database"
+      path: "#"
+      // path: "/services/database"
     }
   ];
 
@@ -153,14 +158,14 @@ const ServicesSection = () => {
               We provide customized solutions that meet our clients' unique needs and help them succeed in an increasingly digital world.
             </p>
             
-            <Link to="/services" className="inline-block">
+            {/* <Link to="/services" className="inline-block">
               <div className="border border-gray-300 text-white py-3 px-6 rounded-md flex items-center justify-between w-48 group hover:bg-white hover:text-black transition-all duration-300">
                 <span className="uppercase text-sm font-medium">Learn More</span>
                 <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="group-hover:translate-x-1 transition-transform duration-300">
                   <path d="M23.5303 6.53033C23.8232 6.23744 23.8232 5.76256 23.5303 5.46967L18.7574 0.696699C18.4645 0.403806 17.9896 0.403806 17.6967 0.696699C17.4038 0.989593 17.4038 1.46447 17.6967 1.75736L21.9393 6L17.6967 10.2426C17.4038 10.5355 17.4038 11.0104 17.6967 11.3033C17.9896 11.5962 18.4645 11.5962 18.7574 11.3033L23.5303 6.53033ZM0 6.75H23V5.25H0V6.75Z" fill="currentColor"/>
                 </svg>
               </div>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

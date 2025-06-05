@@ -1,24 +1,32 @@
+import { link } from 'fs';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProjectsSection = () => {
   const projects = [
     {
       number: "01",
-      title: "Lorem Ipsum",
+      title: "News Network",
       year: "2022",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      image: "news-network.png",
+      link: 'https://seodirectservice.com',
+      description: "You can automate posting of your articles by scheduling posts up to 30 days into the future, saving you time"
     },
     {
       number: "02",
-      title: "Lorem Ipsum",
-      year: "2022",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      title: "Oasis Dental Call Center",
+      year: "2023",
+      image: "oasisdentalcallcenter.png",
+      link: 'https://oasisdentalcallcenter.com',
+      description: "The Oasis Dental Call Center is currently in its inception phase, having been conceived through the collaboration of the Gabucan brothers."
     },
     {
       number: "03",
-      title: "Lorem Ipsum",
-      year: "2022",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      title: "Sparc Mobile",
+      year: "2024",
+      link: 'https://wesparc.com/',
+      image: "wesparc.png",
+      description: "Monitoring information to enhance efficiency, reliability, and accessibility for both staff and the general public."
     }
   ];
 
@@ -35,9 +43,15 @@ const ProjectsSection = () => {
         
         <div className="space-y-16">
           {projects.map((project, index) => (
-            <div 
+            <Link
+              to={project.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              key={index}
+              >
+                            <div 
               key={index} 
-              className="border-t border-white/10 pt-12 group cursor-pointer"
+              className="p-12 border-t border-white/10 group cursor-pointer"
             >
               <div className="grid grid-cols-12 gap-8">
                 <div className="col-span-1">
@@ -46,7 +60,7 @@ const ProjectsSection = () => {
                   </div>
                 </div>
                 <div className="col-span-3">
-                  <h3 className="text-3xl font-medium mb-2 group-hover:text-red-600 transition-colors duration-300">
+                  <h3 className="text-3xl font-medium mb-2 group-hover:text-red-600 ">
                     {project.title}
                   </h3>
                   <span className="text-sm text-gray-400">{project.year}</span>
@@ -57,10 +71,17 @@ const ProjectsSection = () => {
                   </p>
                 </div>
                 <div className="col-span-4">
-                  <div className="bg-gray-800 h-48 rounded-lg w-full transition-all duration-500 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-red-600/10"></div>
+                  <div className="bg-gray-800 h-48 rounded-lg w-full transition-all duration-500 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-red-600/10">
+                    <img 
+                      src={`${project.image}`} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>

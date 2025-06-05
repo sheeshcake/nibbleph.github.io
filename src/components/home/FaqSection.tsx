@@ -74,7 +74,7 @@ const FaqSection = () => {
   const faqs = [
     {
       question: "What technologies do you specialize in?",
-      answer: "We specialize in a wide range of technologies including React, Vue, Angular for frontend; Node.js, Python, and Java for backend; React Native and Flutter for mobile development; and AWS, Azure, and GCP for cloud solutions."
+      answer: "We specialize in a wide range of technologies including React, Vue, Angular for frontend; Node.js, Python, Laravel, and Java for backend; React Native and Flutter for mobile development; and AWS and Azure for cloud solutions."
     },
     {
       question: "How does your project development process work?",
@@ -82,7 +82,7 @@ const FaqSection = () => {
     },
     {
       question: "What is your typical project timeline?",
-      answer: "Project timelines vary based on complexity and scope. A simple website might take 2-4 weeks, while a complex application could take 3-6 months. We provide detailed timelines during the initial consultation."
+      answer: "Project timelines vary based on complexity and scope. A simple website might take 4-5 weeks, while a complex application could take 3-6 months. We provide detailed timelines during the initial consultation."
     }
   ];
 

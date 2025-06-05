@@ -53,26 +53,27 @@ const Index = () => {
         <ScrollSection>
           <ServicesSection />
         </ScrollSection>
-        
-        <ScrollSection>
-          <ProjectsSection />
-        </ScrollSection>
-        
+
         <ScrollSection>
           <CtaSection />
         </ScrollSection>
         
         <ScrollSection>
+          <ProjectsSection />
+        </ScrollSection>
+        
+        
+        {/* <ScrollSection>
           <TestimonialsSection />
-        </ScrollSection>
+        </ScrollSection> */}
         
-        <ScrollSection>
+        {/* <ScrollSection>
           <TeamSection />
-        </ScrollSection>
+        </ScrollSection> */}
         
-        <ScrollSection>
+        {/* <ScrollSection>
           <BlogSection />
-        </ScrollSection>
+        </ScrollSection> */}
         
         <ScrollSection>
           <FaqSection />

@@ -71,7 +71,7 @@ export default function AboutUsSection() {
     };
 
     return (
-        <div className="container-custom flex flex-row mb-20 overflow-visible h-[60vh]">
+        <section id="about" className="container-custom flex flex-row mb-20 overflow-visible h-[60vh]">
             <motion.div 
                 initial="hidden"
                 animate="visible"
@@ -162,6 +162,6 @@ export default function AboutUsSection() {
                     }}
                 ></div>
             </div>
-        </div>
+        </section>
     );
 }

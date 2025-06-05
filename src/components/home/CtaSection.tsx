@@ -11,14 +11,14 @@ const CtaSection = () => {
             to the next <span className="text-red-600">level</span>?
           </h2>
           
-          <button className="group bg-white text-black px-8 py-4 rounded-full text-sm font-medium hover:bg-gray-100 transition-all duration-300 hover:-translate-y-0.5 flex items-center">
+          {/* <button className="group bg-white text-black px-8 py-4 rounded-full text-sm font-medium hover:bg-gray-100 transition-all duration-300 hover:-translate-y-0.5 flex items-center">
             GET FREE CONSULTATION
             <span className="ml-2 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
-          </button>
+          </button> */}
 
           {/* Wave SVG animation */}
           <svg 
-            className="absolute bottom-0 left-0 w-full h-24 opacity-10 animate-wave" 
+            className="absolute bottom-0 left-0 w-full h-150 opacity-10 animate-wave" 
             viewBox="0 0 1440 120" 
             xmlns="http://www.w3.org/2000/svg"
           >
