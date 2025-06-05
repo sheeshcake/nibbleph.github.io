@@ -35,14 +35,14 @@ const ProjectsSection = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between mb-16">
           <h2 className="text-6xl font-bold">Projects</h2>
-          <button className="border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors duration-300 flex items-center space-x-2">
+          {/* <button className="border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors duration-300 flex items-center space-x-2">
             <span>READ MORE PROJECTS</span>
             <span className="ml-2">→</span>
-          </button>
+          </button> */}
         </div>
         
         <div className="space-y-16">
-          {projects.map((project, index) => (
+          {projects.reverse().map((project, index) => (
             <Link
               to={project.link} 
               target="_blank" 
