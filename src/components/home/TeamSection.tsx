@@ -7,8 +7,8 @@ const TeamSection = () => {
       title: "Tech Lead/Engineering Manager",
     },
     {
-      name: "Sarah Chen",
-      title: "CTO"
+      name: "Charisse Avegail De Guzman",
+      title: "QA Lead"
     },
     {
       name: "Michael Rodriguez",

@@ -23,7 +23,7 @@ const ExploreButton: React.FC<ExploreButtonProps> = ({ to, className = "" }) => 
       <div className="w-[540px] h-[250px] bg-gray-800/40 backdrop-blur-sm rounded-[30px] animate-fade-in-delay"></div>
       {/* Explore button */}
       <Link 
-        to={to}
+        to={'#about'}
         className={`absolute right-12 -bottom-20 z-50 hover:cursor-pointer transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
       >
         <div className="w-[200px] h-[200px] rounded-full bg-red-600 flex items-center justify-center cursor-pointer transform hover:scale-110 hover:shadow-[0_0_30px_rgba(255,0,0,0.6)] transition-all duration-300 ease-in-out relative group">

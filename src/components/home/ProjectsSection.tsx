@@ -1,60 +1,87 @@
+import { link } from 'fs';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Complete rebuild of a major retail platform with improved user experience and performance."
+      number: "01",
+      title: "News Network",
+      year: "2022",
+      image: "news-network.png",
+      link: 'https://seodirectservice.com',
+      description: "You can automate posting of your articles by scheduling posts up to 30 days into the future, saving you time"
     },
     {
-      title: "Healthcare Dashboard",
-      description: "Data visualization tools for healthcare providers to monitor and improve patient outcomes."
+      number: "02",
+      title: "Oasis Dental Call Center",
+      year: "2023",
+      image: "oasisdentalcallcenter.png",
+      link: 'https://oasisdentalcallcenter.com',
+      description: "The Oasis Dental Call Center is currently in its inception phase, having been conceived through the collaboration of the Gabucan brothers."
     },
     {
-      title: "Fintech Mobile App",
-      description: "Secure and intuitive mobile application for personal finance management and investments."
+      number: "03",
+      title: "Sparc Mobile",
+      year: "2024",
+      link: 'https://wesparc.com/',
+      image: "wesparc.png",
+      description: "Monitoring information to enhance efficiency, reliability, and accessibility for both staff and the general public."
     }
   ];
 
   return (
-    <section className="bg-black text-white py-20 relative overflow-hidden">
-      {/* Floating shapes */}
-      <div className="absolute left-0 top-1/3 w-32 h-32 rounded-full bg-red-600/20 blur-2xl animate-float-slow"></div>
-      <div className="absolute right-0 bottom-1/4 w-48 h-48 rounded-full bg-blue-500/20 blur-3xl animate-float"></div>
-      
-      <div className="container-custom relative z-10">
-        <div className="flex items-center justify-between mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold">Projects</h2>
-          <div className="hidden md:block">
-            <div className="flex space-x-2">
-              <button className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center transition-colors hover:bg-white/10">
-                <span>←</span>
-              </button>
-              <button className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center transition-colors hover:bg-white/10">
-                <span>→</span>
-              </button>
-            </div>
-          </div>
+    <section className="bg-black text-white py-20">
+      <div className="container-custom">
+        <div className="flex items-center justify-between mb-16">
+          <h2 className="text-6xl font-bold">Projects</h2>
+          <button className="border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors duration-300 flex items-center space-x-2">
+            <span>READ MORE PROJECTS</span>
+            <span className="ml-2">→</span>
+          </button>
         </div>
         
-        <div className="space-y-6">
+        <div className="space-y-16">
           {projects.map((project, index) => (
-            <div 
+            <Link
+              to={project.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              key={index}
+              >
+                            <div 
               key={index} 
-              className="border-t border-white/10 py-6 transition-all duration-300 hover:bg-white/5 group"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="p-12 border-t border-white/10 group cursor-pointer"
             >
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-                <div className="mb-4 md:mb-0">
-                  <div className="flex items-center mb-2">
-                    <div className="h-3 w-3 rounded-full bg-red-600 mr-3 group-hover:animate-pulse"></div>
-                    <h3 className="text-xl font-semibold">{project.title}</h3>
+              <div className="grid grid-cols-12 gap-8">
+                <div className="col-span-1">
+                  <div className="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center text-sm">
+                    {project.number}
                   </div>
-                  <p className="text-sm text-gray-400 max-w-xl">{project.description}</p>
                 </div>
-                <div className="bg-gray-800 h-16 md:h-24 w-full md:w-64 rounded transition-transform duration-500 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-red-600/10"></div>
+                <div className="col-span-3">
+                  <h3 className="text-3xl font-medium mb-2 group-hover:text-red-600 ">
+                    {project.title}
+                  </h3>
+                  <span className="text-sm text-gray-400">{project.year}</span>
+                </div>
+                <div className="col-span-4">
+                  <p className="text-gray-400 leading-relaxed">
+                    {project.description}
+                  </p>
+                </div>
+                <div className="col-span-4">
+                  <div className="bg-gray-800 h-48 rounded-lg w-full transition-all duration-500 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-red-600/10">
+                    <img 
+                      src={`${project.image}`} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>

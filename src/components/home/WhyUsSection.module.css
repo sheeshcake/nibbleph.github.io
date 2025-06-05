@@ -1,0 +1,27 @@
+.iconWrapper {
+  transition: transform 0.3s ease-in-out;
+}
+
+.iconWrapper:hover {
+  transform: translateY(-5px) rotateY(10deg);
+}
+
+.icon {
+  transition: all 0.3s ease-in-out;
+}
+
+.iconWrapper:hover .icon {
+  filter: drop-shadow(0 0 8px red);
+  transform: scale(1.1);
+}
+
+.reasonCard {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

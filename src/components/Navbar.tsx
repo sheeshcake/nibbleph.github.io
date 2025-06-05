@@ -14,7 +14,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="hidden md:flex items-center space-x-8">
+        {/* <div className="hidden md:flex items-center space-x-8">
           <Link
             to="/about"
             className="text-sm font-medium text-gray-300 hover:text-red-600 transition-colors duration-300"
@@ -45,7 +45,7 @@ const Navbar = () => {
           >
             CONTACT
           </Link>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

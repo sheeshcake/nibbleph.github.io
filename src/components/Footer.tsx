@@ -15,7 +15,7 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
               <h4 className="text-sm font-semibold mb-4">Company</h4>
               <ul className="space-y-3">
@@ -55,15 +55,15 @@ const Footer = () => {
                 <li><Link to="/" className="text-xs text-gray-400 hover:text-white">Licenses</Link></li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
         
         <div className="mt-16 pt-8 border-t border-gray-800 text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center">
           <p>© 2023 Nibble Dev Team. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="/" className="hover:text-white">Privacy Policy</Link>
+            {/* <Link to="/" className="hover:text-white">Privacy Policy</Link>
             <Link to="/" className="hover:text-white">Terms of Service</Link>
-            <Link to="/" className="hover:text-white">Cookie Policy</Link>
+            <Link to="/" className="hover:text-white">Cookie Policy</Link> */}
           </div>
         </div>
       </div>
