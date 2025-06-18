@@ -227,33 +227,59 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen bg-black relative overflow-hidden pt-24">
       {/* Main content */}
-      <div className="container mx-auto px-8 pt-10">
-        {/* Top row - Transform and gray box */}
-        <div className="flex justify-between items-center">
-          <h1 className="text-8xl md:text-[150px] font-bold text-white leading-[1.1] animate-fade-in">
-            <span className="inline-block animate-slide-up">Transform</span>
-          </h1>
+      <div className="container mx-auto px-4 sm:px-8 pt-10">
+        {/* Mobile layout */}
+        <div className="block md:hidden">
+          <div className="flex flex-col gap-2">
+            <h1 className="text-5xl sm:text-7xl font-bold text-white leading-[1.1] animate-fade-in">
+              <span className="inline-block animate-slide-up">Transform</span>
+            </h1>
+            <h1 className="text-5xl sm:text-7xl font-bold text-white leading-[1.1] animate-fade-in">
+              <span className="inline-block animate-slide-up-delay">Your</span>
+            </h1>
+            <h1 className="text-5xl sm:text-7xl italic font-normal text-white leading-[1.1] animate-fade-in-delay-2">
+              <span className="inline-block animate-slide-up-delay-2">Business</span>
+            </h1>
+          </div>
 
-          {/* Use the new ExploreButton component */}
-          <ExploreButton to="/services" />
+          <div className="mt-8">
+            <p className="text-base text-gray-400 leading-relaxed text-center">
+              Our team of experts has years of experience in the IT industry and a
+              passion for innovative technology solutions. We're dedicated to
+              delivering solutions that are tailored to your unique needs and
+              budget, and that exceed your expectations.
+            </p>
+          </div>
+
+          <div className="mt-8">
+            <ExploreButton to="/services" className="w-full" />
+          </div>
         </div>
-        <div className="flex flex-row gap-10 -mt-5">
-          <h1 className="text-8xl md:text-[150px] font-bold text-white leading-[1.1] animate-fade-in-delay">
-            <span className="inline-block animate-slide-up-delay">Your</span>
-          </h1>
-          <h1 className="text-8xl md:text-[150px] italic font-normal text-white leading-[1.1] animate-fade-in-delay-2">
-            <span className="inline-block animate-slide-up-delay-2">
-              Business
-            </span>
-          </h1>
-        </div>
-        <div className="max-w-xl ml-auto mr-[60px] animate-fade-in-delay-3">
-          <p className="text-gray-400 text-lg leading-relaxed text-left">
-            Our team of experts has years of experience in the IT industry and a
-            passion for innovative technology solutions. We're dedicated to
-            delivering solutions that are tailored to your unique needs and
-            budget, and that exceed your expectations.
-          </p>
+
+        {/* Desktop/Tablet layout */}
+        <div className="hidden md:block">
+          <div className="flex flex-row justify-between items-center gap-8">
+            <h1 className="text-7xl lg:text-8xl xl:text-[150px] font-bold text-white leading-[1.1] animate-fade-in">
+              <span className="inline-block animate-slide-up">Transform</span>
+            </h1>
+            <ExploreButton to="/services" className="w-auto" />
+          </div>
+          <div className="flex flex-row gap-10 -mt-5">
+            <h1 className="text-7xl lg:text-8xl xl:text-[150px] font-bold text-white leading-[1.1] animate-fade-in">
+              <span className="inline-block animate-slide-up-delay">Your</span>
+            </h1>
+            <h1 className="text-7xl lg:text-8xl xl:text-[150px] italic font-normal text-white leading-[1.1] animate-fade-in-delay-2">
+              <span className="inline-block animate-slide-up-delay-2">Business</span>
+            </h1>
+          </div>
+          <div className="max-w-xl ml-auto mr-[60px] mt-0 animate-fade-in-delay-3">
+            <p className="text-lg text-gray-400 leading-relaxed text-left">
+              Our team of experts has years of experience in the IT industry and a
+              passion for innovative technology solutions. We're dedicated to
+              delivering solutions that are tailored to your unique needs and
+              budget, and that exceed your expectations.
+            </p>
+          </div>
         </div>
       </div>
 

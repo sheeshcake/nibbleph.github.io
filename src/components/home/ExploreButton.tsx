@@ -20,18 +20,19 @@ const ExploreButton: React.FC<ExploreButtonProps> = ({ to, className = "" }) => 
 
   return (
     <div className={`relative ${className}`}>
-      <div className="w-[540px] h-[250px] bg-gray-800/40 backdrop-blur-sm rounded-[30px] animate-fade-in-delay"></div>
+      <div className="w-full md:w-[540px] h-[200px] md:h-[250px] bg-gray-800/40 backdrop-blur-sm rounded-[30px] animate-fade-in-delay"></div>
       {/* Explore button */}
       <Link 
         to={'#about'}
-        className={`absolute right-12 -bottom-20 z-50 hover:cursor-pointer transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+        className={`absolute right-4 md:right-12 -bottom-16 md:-bottom-20 z-50 hover:cursor-pointer transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
       >
-        <div className="w-[200px] h-[200px] rounded-full bg-red-600 flex items-center justify-center cursor-pointer transform hover:scale-110 hover:shadow-[0_0_30px_rgba(255,0,0,0.6)] transition-all duration-300 ease-in-out relative group">
+        <div className="w-[150px] h-[150px] md:w-[200px] md:h-[200px] rounded-full bg-red-600 flex items-center justify-center cursor-pointer transform hover:scale-110 hover:shadow-[0_0_30px_rgba(255,0,0,0.6)] transition-all duration-300 ease-in-out relative group">
           {/* Centered Arrow */}
-          <div className="w-[180px] h-[180px] inset-0 flex items-center justify-center z-10">
+          <div className="w-[135px] h-[135px] md:w-[180px] md:h-[180px] inset-0 flex items-center justify-center z-10">
             <svg
-              width="60"
-              height="60"
+              width="45"
+              height="45"
+              className="md:w-[60px] md:h-[60px]"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +51,7 @@ const ExploreButton: React.FC<ExploreButtonProps> = ({ to, className = "" }) => 
           {/* Circular Text with animation */}
           <div className={`absolute inset-0 pointer-events-none ${isVisible ? 'animate-[spin_20s_linear_infinite]' : 'opacity-0'}`}>
             <svg
-              className="absolute inset-0 w-[200px] h-[200px] p-5"
+              className="absolute inset-0 w-[150px] h-[150px] md:w-[200px] md:h-[200px] p-4 md:p-5"
               viewBox="0 0 100 100"
             >
               <path

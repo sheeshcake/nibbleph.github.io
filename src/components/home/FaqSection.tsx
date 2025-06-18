@@ -12,7 +12,7 @@ interface FaqItemProps {
 const FaqItem = ({ question, answer, index, isOpen, toggleFaq }: FaqItemProps) => {
   return (
     <motion.div 
-      className="border-b border-white/10 py-6"
+      className="border-b border-white/10 py-4 md:py-6"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
@@ -22,15 +22,15 @@ const FaqItem = ({ question, answer, index, isOpen, toggleFaq }: FaqItemProps) =
         onClick={() => toggleFaq(index)}
       >
         <motion.span 
-          className="text-sm mr-2 text-gray-400"
+          className="text-xs md:text-sm mr-2 text-gray-400"
           animate={{ color: isOpen ? '#ffffff' : '#9ca3af' }}
           transition={{ duration: 0.3 }}
         >
           {String(index + 1).padStart(2, '0')}
         </motion.span>
-        <span className="text-white text-lg flex-grow group-hover:text-gray-300 transition-colors">{question}</span>
+        <span className="text-white text-base md:text-lg flex-grow group-hover:text-gray-300 transition-colors">{question}</span>
         <motion.span 
-          className="text-white text-xl w-6 h-6 flex items-center justify-center"
+          className="text-white text-lg md:text-xl w-6 h-6 flex items-center justify-center"
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.3 }}
         >
