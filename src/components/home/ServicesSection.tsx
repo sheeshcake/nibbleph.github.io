@@ -71,101 +71,65 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="bg-black py-20 relative overflow-hidden">
+    <section className="bg-black py-10 md:py-20 relative overflow-hidden">
       {/* Animated floating squares - added more animations */}
       <div 
-        className="absolute top-10 left-1/2 w-20 h-20 bg-gray-400 opacity-30 animate-float transition-all duration-3000 ease-in-out backdrop-blur-sm"
+        className="absolute top-10 left-1/2 w-16 md:w-20 h-16 md:h-20 bg-gray-400 opacity-30 animate-float transition-all duration-3000 ease-in-out backdrop-blur-sm"
         style={{
           transform: `translateY(0) translateX(${positions.square1.x}px) rotate(${positions.square1.rotation}deg)`,
           animation: 'float 6s ease-in-out infinite, spin 15s linear infinite, pulse 4s ease-in-out infinite'
         }}
       ></div>
       <div 
-        className="absolute bottom-10 right-10 w-10 h-10 bg-red-600 transition-all duration-3000 ease-in-out backdrop-blur-sm"
+        className="absolute bottom-10 right-10 w-8 md:w-10 h-8 md:h-10 bg-red-600 transition-all duration-3000 ease-in-out backdrop-blur-sm"
         style={{
           transform: `translateY(0) translateX(${positions.square2.x}px) rotate(${positions.square2.rotation}deg)`,
           animation: 'float-slow 8s ease-in-out infinite, spin 20s linear infinite reverse, scale 5s ease-in-out infinite'
         }}
       ></div>
       
-      <div className="container-custom relative z-10 py-20">
-        <div className="grid grid-cols-12 gap-6">
+      <div className="container-custom relative z-10 py-10 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
+          {/* Right side content - moved to top on mobile */}
+          <div className="order-first lg:order-last col-span-1 lg:col-span-6 flex flex-col justify-center lg:pl-12 mb-10 lg:mb-0">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-red-600 mb-4 md:mb-6">
+              Services
+            </h2>
+            <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-md">
+              We provide customized solutions that meet our clients' unique needs and help them succeed in an increasingly digital world.
+            </p>
+          </div>
+
           {/* Left side services */}
-          <div className="col-span-12 md:col-span-3 lg:col-span-3 flex flex-col space-y-8">
-            <Link to={services[0].path} className="relative group">
-              <div className="bg-black p-6 rounded-md flex items-center justify-between transition-all duration-500 group-hover:border group-hover:border-gray-600">
-                <h3 className="text-xl md:text-2xl font-bold text-white">Web<br />Development</h3>
-                <div className="text-white opacity-0 transform translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+          <div className="order-2 lg:order-first col-span-1 lg:col-span-3 flex flex-col space-y-4 md:space-y-8">
+            {services.slice(0, 3).map((service, index) => (
+              <Link key={index} to={service.path} className="relative group">
+                <div className="bg-black p-4 md:p-6 rounded-md flex items-center justify-between transition-all duration-500 group-hover:border group-hover:border-gray-600">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white">{service.title}</h3>
+                  <div className="text-white opacity-0 transform translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </Link>
-            
-            <Link to={services[1].path} className="relative group">
-              <div className="bg-black p-6 rounded-md flex items-center justify-between transition-all duration-500 group-hover:border group-hover:border-gray-600">
-                <h3 className="text-xl md:text-2xl font-bold text-white">Mobile<br />Development</h3>
-                <div className="text-white opacity-0 transform translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-              </div>
-            </Link>
-            
-            <Link to={services[2].path} className="relative group">
-              <div className="bg-black p-6 rounded-md flex items-center justify-between transition-all duration-500 group-hover:border group-hover:border-gray-600">
-                <h3 className="text-xl md:text-2xl font-bold text-white">Artificial<br />Intelligence</h3>
-                <div className="text-white opacity-0 transform translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-              </div>
-            </Link>
+              </Link>
+            ))}
           </div>
           
           {/* Middle services */}
-          <div className="col-span-12 md:col-span-3 lg:col-span-3 md:mt-16 flex flex-col space-y-8">
-            <Link to={services[3].path} className="relative group">
-              <div className="bg-black p-6 rounded-md flex items-center justify-between transition-all duration-500 group-hover:border group-hover:border-gray-600">
-                <h3 className="text-xl md:text-2xl font-bold text-white">Quality<br />Assurance</h3>
-                <div className="text-white opacity-0 transform translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+          <div className="order-3 col-span-1 lg:col-span-3 flex flex-col space-y-4 md:space-y-8">
+            {services.slice(3).map((service, index) => (
+              <Link key={index} to={service.path} className="relative group">
+                <div className="bg-black p-4 md:p-6 rounded-md flex items-center justify-between transition-all duration-500 group-hover:border group-hover:border-gray-600">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white">{service.title}</h3>
+                  <div className="text-white opacity-0 transform translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </Link>
-            
-            <Link to={services[4].path} className="relative group">
-              <div className="bg-black p-6 rounded-md flex items-center justify-between transition-all duration-500 group-hover:border group-hover:border-gray-600">
-                <h3 className="text-xl md:text-2xl font-bold text-white">Database<br />Architecture</h3>
-                <div className="text-white opacity-0 transform translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-              </div>
-            </Link>
-          </div>
-          
-          {/* Right side content */}
-          <div className="col-span-12 md:col-span-6 lg:col-span-6 flex flex-col justify-center md:pl-12">
-            <h2 className="text-4xl md:text-6xl font-bold text-red-600 mb-6">Services</h2>
-            <p className="text-gray-300 mb-8 max-w-md">
-              We provide customized solutions that meet our clients' unique needs and help them succeed in an increasingly digital world.
-            </p>
-            
-            {/* <Link to="/services" className="inline-block">
-              <div className="border border-gray-300 text-white py-3 px-6 rounded-md flex items-center justify-between w-48 group hover:bg-white hover:text-black transition-all duration-300">
-                <span className="uppercase text-sm font-medium">Learn More</span>
-                <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="group-hover:translate-x-1 transition-transform duration-300">
-                  <path d="M23.5303 6.53033C23.8232 6.23744 23.8232 5.76256 23.5303 5.46967L18.7574 0.696699C18.4645 0.403806 17.9896 0.403806 17.6967 0.696699C17.4038 0.989593 17.4038 1.46447 17.6967 1.75736L21.9393 6L17.6967 10.2426C17.4038 10.5355 17.4038 11.0104 17.6967 11.3033C17.9896 11.5962 18.4645 11.5962 18.7574 11.3033L23.5303 6.53033ZM0 6.75H23V5.25H0V6.75Z" fill="currentColor"/>
-                </svg>
-              </div>
-            </Link> */}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

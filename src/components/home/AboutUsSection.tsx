@@ -71,21 +71,21 @@ export default function AboutUsSection() {
     };
 
     return (
-        <section id="about" className="container-custom flex flex-row mb-20 overflow-visible h-[60vh]">
+        <section id="about" className="container-custom flex flex-col md:flex-row mb-10 md:mb-20 overflow-visible min-h-[60vh] px-4 md:px-8 py-10 md:py-20">
             <motion.div 
                 initial="hidden"
                 animate="visible"
-                className="flex flex-col gap-5 mr-20"
+                className="flex flex-col gap-4 md:gap-5 md:mr-20 w-full md:w-2/3"
             >
                 <motion.h1 
                     variants={textVariants}
-                    className="text-red-500 text-2xl relative"
+                    className="text-red-500 text-xl md:text-2xl relative"
                 >
                     About.
                 </motion.h1>
                 
                 <motion.h1 
-                    className="text-white text-6xl flex flex-wrap gap-3"
+                    className="text-white text-4xl sm:text-5xl md:text-6xl flex flex-wrap gap-2 sm:gap-3"
                     variants={textVariants}
                 >
                     {["We", "believe", "that"].map((word, i) => (
@@ -108,7 +108,7 @@ export default function AboutUsSection() {
                 </motion.h1>
 
                 <motion.h1 
-                    className="text-white text-6xl flex flex-wrap gap-3"
+                    className="text-white text-4xl sm:text-5xl md:text-6xl flex flex-wrap gap-2 sm:gap-3"
                     variants={textVariants}
                 >
                     {["can", "transform", "the"].map((word, i) => (
@@ -136,7 +136,7 @@ export default function AboutUsSection() {
                 </motion.h1>
 
                 <motion.p 
-                    className="text-white max-w-xl"
+                    className="text-white text-base sm:text-lg max-w-xl mt-4 md:mt-6"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1, duration: 0.8 }}
@@ -146,7 +146,7 @@ export default function AboutUsSection() {
                 </motion.p>    
             </motion.div>
 
-            <div className="flex flex-col gap-5 mx-20 pt-20">
+            <div className="hidden md:flex flex-col gap-5 mx-auto md:mx-20 pt-10 md:pt-20 w-full md:w-1/3">
                 <div 
                     className="w-5 h-5 bg-gray-500 justify-end self-end"
                     style={{
@@ -155,7 +155,7 @@ export default function AboutUsSection() {
                     }}
                 ></div>
                 <div 
-                    className="w-[100px] h-[100px] bg-red-500 mt-10 mr-10"
+                    className="w-[60px] sm:w-[80px] md:w-[100px] h-[60px] sm:h-[80px] md:h-[100px] bg-red-500 mt-10 mr-10"
                     style={{
                         transform: `translateY(0) translateX(${positions.square2.x}px) rotate(${positions.square2.rotation}deg)`,
                         animation: 'float-slow 8s ease-in-out infinite, spin 20s linear infinite reverse'
