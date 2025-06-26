@@ -27,6 +27,14 @@ const ProjectsSection = () => {
       link: 'https://wesparc.com/',
       image: "wesparc.png",
       description: "Monitoring information to enhance efficiency, reliability, and accessibility for both staff and the general public."
+    },
+    {
+      number: "04",
+      title: "Re360",
+      year: "2025",
+      link: 'https://re360.nibbleph.dev/',
+      image: "re360.png",
+      description: "re360 is a real estate management application, It is designed to help real estate agents and property managers manage their properties, tenants, leases, payments, maintenance, and more."
     }
   ];
 
