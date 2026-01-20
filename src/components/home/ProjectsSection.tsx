@@ -32,9 +32,17 @@ const ProjectsSection = () => {
       number: "04",
       title: "Re360",
       year: "2025",
-      link: 'https://re360.nibbleph.dev/',
+      link: 'https://re360.ph',
       image: "re360.png",
       description: "re360 is a real estate management application, It is designed to help real estate agents and property managers manage their properties, tenants, leases, payments, maintenance, and more."
+    },
+    {
+      number: "05",
+      title: "Rentaro",
+      year: "2025",
+      link: 'https://market.rentaro.ph',
+      image: "rentaro.png",
+      description: "an online rental marketplace platform that enables users to browse and list items such as gadgets and vehicles for rent. Oversaw architecture, full-stack development, and feature implementation to support hosting, listings, and user account functionality. Contributed to both the consumer portal and marketplace interface, ensuring scalable and user-friendly experiences across core product offerings"
     }
   ];
 
